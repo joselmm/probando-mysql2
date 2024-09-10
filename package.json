@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.20.0",
+    "mysql2": "^3.11.1"
+  },
+  "scripts": {
+    "dev": "node app.js",
+    "start": "node app.js"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
