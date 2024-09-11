@@ -14,9 +14,9 @@ app.post('/', async (req, res) => {
   const { mySqlSentence } = req.body;
 
   const responseObject = { noError: true, results: "" };
-
+var connection;
   try {
-    const connection = await mysql.createConnection({
+     connection = await mysql.createConnection({
         host: process.env.DB_HOST,
         user: process.env.DB_USER,
         password: process.env.DB_PASSWORD,
