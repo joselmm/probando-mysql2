@@ -32,6 +32,8 @@ app.post('/', async (req, res) => {
     responseObject.noError = false;
     responseObject.errorMessage = err.message;
     res.json(responseObject);
+  }finally{
+    connection.end();
   }
 });
 
