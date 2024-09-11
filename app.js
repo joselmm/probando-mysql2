@@ -25,7 +25,14 @@ var connection;
     });
 
     const results = await connection.query(mySqlSentence);
+  if (!mySqlSentence.trim().toUpperCase().startsWith('SELECT')) {
+
+    responseObject.results = results[0];
+  }else{
+    
+    
     responseObject.results = results;
+  }
 
     res.json(responseObject);
   } catch (err) {
