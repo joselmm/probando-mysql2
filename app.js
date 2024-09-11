@@ -27,7 +27,7 @@ var connection;
     const results = await connection.query(mySqlSentence);
   if (!mySqlSentence.trim().toUpperCase().startsWith('SELECT')) {
 
-    responseObject.results = results[0];
+    responseObject.results = results[0][0];
   }else{
     
     
